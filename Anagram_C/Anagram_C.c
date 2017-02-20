@@ -5,6 +5,7 @@
 
 int main(void)
 {
+	//here is the declaration of the variables
 	char  **str, *str2;
 	int cols, rows, i, j, k, sum = 0, counter = 0, l = 0;
 	int *index;
@@ -12,9 +13,11 @@ int main(void)
 
 	printf("Give the dimensions of the array (columns x rows) \n");
 	scanf_s("%d%d", &cols, &rows);
-
+	
+	//here we clear the input from the '\n' character
 	while ((c = getchar()) != '\n' && c != EOF) {}
-
+	
+	//here we allocate the memory of the MxN dimensions array
 	str = (char **)malloc(rows * sizeof(char*));
 	if (str == NULL)
 	{
@@ -34,7 +37,9 @@ int main(void)
 	}
 
 	printf("Give the characters\n");
-
+	
+	//here the program gets the input from the keyboard and pass it in the str[][] array
+	//also when it finds a ' ' (space character), crops it and pass the next letter
 	i = 0;
 	j = 0;
 	while ((ch = getchar()) != '\n' && ch != EOF)
@@ -129,7 +134,7 @@ int main(void)
 
 
 
-
+	//here we free the memory we allocated before
 
 	for (i = 0; i < rows; i++)
 		free(str[i]);
