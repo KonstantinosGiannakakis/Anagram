@@ -12,7 +12,7 @@ int main(void)
 	char c, ch;
 
 	printf("Give the dimensions of the array (columns x rows) \n");
-	scanf_s("%d%d", &cols, &rows);
+	scanf("%d%d", &cols, &rows);
 	
 	//here we clear the input from the '\n' character
 	while ((c = getchar()) != '\n' && c != EOF) {}
@@ -125,7 +125,7 @@ int main(void)
 			printf("[%d] ", index[i]);
 			for (j = 0; j < cols; j++)
 			{
-				printf("%c ", str[i][j]);
+				printf("%c ", str[index[i]][j]);
 			}
 			printf("\n");
 		}
